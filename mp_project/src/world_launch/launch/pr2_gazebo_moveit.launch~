@@ -20,7 +20,7 @@
 
   <!-- Add Coke can to the world -->
   <node name="spawn_object" pkg="gazebo_ros" type="spawn_model" 
-   args="-urdf -file $(find world_launch)/models/cube_red.urdf -model cube -x 1.745 -y 0.6 -z 0.55"
+   args="-urdf -file $(find world_launch)/models/coke_can.urdf -model coke -x 1.745 -y 0.6 -z 0.55"
    respawn="false" output="screen" />
 
 

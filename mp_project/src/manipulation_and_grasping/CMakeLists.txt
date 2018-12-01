@@ -11,11 +11,17 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  geometric_shapes
+  moveit_core
+  moveit_ros_planning
+  moveit_ros_planning_interface
+  pluginlib
 )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-
+find_package(cmake_modules REQUIRED)
+find_package(Eigen REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -118,6 +124,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${EIGEN_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -134,6 +141,10 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/manipulation_and_grasping_node.cpp)
+# add_executable(tutorial_node tutorial.cpp)
+add_executable(move_arm src/move_arm.cpp)
+target_link_libraries(move_arm ${catkin_LIBRARIES} )
+# add_dependencies(talker beginner_tutorials_generate_messages_cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

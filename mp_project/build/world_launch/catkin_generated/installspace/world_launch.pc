@@ -1,0 +1,8 @@
+prefix=/home/nishant/Motion_Planning_Project/mp_project/install
+
+Name: world_launch
+Description: Description of world_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nishant/Motion_Planning_Project/mp_project/install/lib 
+Requires: 
