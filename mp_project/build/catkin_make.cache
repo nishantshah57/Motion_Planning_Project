@@ -1,2 +1,0 @@
-manipulation_and_grasping:pr2_gazebo:pr2_moveit:world_launch
--DCATKIN_DEVEL_PREFIX=/home/nishant/Motion_Planning_Project/mp_project/devel -DCMAKE_INSTALL_PREFIX=/home/nishant/Motion_Planning_Project/mp_project/install -G Unix Makefiles

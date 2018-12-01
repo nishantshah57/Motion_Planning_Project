@@ -1,8 +1,0 @@
-prefix=/home/nishant/Motion_Planning_Project/mp_project/install
-
-Name: manipulation_and_grasping
-Description: Description of manipulation_and_grasping
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/nishant/Motion_Planning_Project/mp_project/install/lib 
-Requires: 

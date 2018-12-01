@@ -1,8 +1,0 @@
-prefix=/home/nishant/Motion_Planning_Project/mp_project/devel
-
-Name: pr2_gazebo
-Description: Description of pr2_gazebo
-Version: 2.0.11
-Cflags: 
-Libs: -L/home/nishant/Motion_Planning_Project/mp_project/devel/lib 
-Requires: 
