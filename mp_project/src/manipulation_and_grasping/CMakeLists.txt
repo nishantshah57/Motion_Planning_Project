@@ -11,6 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  cmake_modules
+  interactive_markers
+  moveit_ros_perception
   geometric_shapes
   moveit_core
   moveit_ros_planning
@@ -26,8 +29,10 @@ find_package(Eigen REQUIRED)
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-# catkin_python_setup()
+#catkin_python_setup()
 
+#install(PROGRAMS temp/python_move_arm.py
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 ################################################
 ## Declare ROS messages, services and actions ##
 ################################################
@@ -144,7 +149,27 @@ include_directories(
 # add_executable(tutorial_node tutorial.cpp)
 add_executable(move_arm src/move_arm.cpp)
 target_link_libraries(move_arm ${catkin_LIBRARIES} )
-# add_dependencies(talker beginner_tutorials_generate_messages_cpp)
+
+add_executable(random_target_manipulation_node src/random_target_manipulation.cpp)
+target_link_libraries(random_target_manipulation_node ${catkin_LIBRARIES} )
+
+#add_executable(mp_node src/mp_temp.cpp)
+#target_link_libraries(mp_node ${catkin_LIBRARIES} )
+
+#add_executable(move_grp_interface_node src/move_grp_interface_temp.cpp)
+#target_link_libraries(move_grp_interface_node ${catkin_LIBRARIES} )
+
+#add_executable(planning_pipeline_tutorial_node src/planning_pipeline_tutorial.cpp)
+#target_link_libraries(planning_pipeline_tutorial_node ${catkin_LIBRARIES} )
+
+#add_executable(planning_scene_ros_api_tutorial_node src/planning_scene_ros_api_tutorial.cpp)
+#target_link_libraries(planning_scene_ros_api_tutorial_node ${catkin_LIBRARIES} )
+
+#add_executable(planning_scene_tutorial_node src/planning_scene_tutorial.cpp)
+#target_link_libraries(planning_scene_tutorial_node ${catkin_LIBRARIES} )
+
+# add_executable(python_move_arm_node src/python_move_arm.py)
+# target_link_libraries(python_move_arm_node ${catkin_LIBRARIES} )
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
