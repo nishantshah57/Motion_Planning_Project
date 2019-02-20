@@ -15,14 +15,22 @@
 
   <!-- Add table to the world -->
   <node name="spawn_table" pkg="gazebo_ros" type="spawn_model" 
-   args="-urdf -file $(find world_launch)/models/table.urdf -model table -x 2.15 -y 0.5"
+   args="-urdf -file $(find world_launch)/models/table.urdf -model table -x 0.80 -y -0.2 -z 0.050"
+   respawn="false" output="screen" />
+
+  <!-- Add Pole can to the world -->
+  <node name="spawn_object2" pkg="gazebo_ros" type="spawn_model" 
+   args="-urdf -file $(find world_launch)/models/cylinder_green.urdf -model cylinder -x 0.70 -y -0.4 -z 0.85 -w 1.0"
    respawn="false" output="screen" />
 
   <!-- Add Coke can to the world -->
   <node name="spawn_object" pkg="gazebo_ros" type="spawn_model" 
-   args="-urdf -file $(find world_launch)/models/coke_can.urdf -model coke -x 1.745 -y 0.6 -z 0.55"
+   args="-urdf -file $(find world_launch)/models/cube_red.urdf -model cube -x 0.50 -y -0.7 -z 0.5"
    respawn="false" output="screen" />
 
-
-   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find world_launch)/launch/rviz.rviz"/>
+  <include file="$(find pr2_moveit)/launch/moveit_rviz.launch">
+    <arg name="config" value="true"/>
+  </include>
+   <!--<node name="rviz" pkg="rviz" type="rviz" args="-d $(find world_launch)/launch/rviz.rviz"/>-->
 </launch>
+

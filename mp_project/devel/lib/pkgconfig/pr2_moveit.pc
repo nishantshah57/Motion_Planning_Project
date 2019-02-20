@@ -1,0 +1,8 @@
+prefix=/home/nishant/Motion_Planning_Project/mp_project/devel
+
+Name: pr2_moveit
+Description: Description of pr2_moveit
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/nishant/Motion_Planning_Project/mp_project/devel/lib 
+Requires: 

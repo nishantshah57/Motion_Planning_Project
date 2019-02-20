@@ -15,10 +15,12 @@ find_package(catkin REQUIRED COMPONENTS
   interactive_markers
   moveit_ros_perception
   geometric_shapes
+  moveit_msgs
   moveit_core
   moveit_ros_planning
   moveit_ros_planning_interface
   pluginlib
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -152,6 +154,12 @@ target_link_libraries(move_arm ${catkin_LIBRARIES} )
 
 add_executable(random_target_manipulation_node src/random_target_manipulation.cpp)
 target_link_libraries(random_target_manipulation_node ${catkin_LIBRARIES} )
+
+#add_executable(custom_target_manipulation_node src/custom_target_manipulation.cpp)
+#target_link_libraries(custom_target_manipulation_node ${catkin_LIBRARIES} )
+
+add_executable(pick_and_place_node src/pick_and_place.cpp)
+target_link_libraries(pick_and_place_node ${catkin_LIBRARIES} )
 
 #add_executable(mp_node src/mp_temp.cpp)
 #target_link_libraries(mp_node ${catkin_LIBRARIES} )

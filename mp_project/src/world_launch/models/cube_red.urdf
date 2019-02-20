@@ -8,13 +8,13 @@
     <visual>
       <origin xyz="0 0 0.0145"/>
       <geometry>
-        <box size="0.029 0.029 0.029"/>
+        <box size="0.058 0.058 0.3"/>
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0.0145"/>
       <geometry>
-        <box size="0.029 0.029 0.029"/>
+        <box size="0.058 0.058 0.3"/>
       </geometry>
     </collision>
   </link>
@@ -22,4 +22,3 @@
     <material>Gazebo/Red</material>
   </gazebo>
 </robot>
-

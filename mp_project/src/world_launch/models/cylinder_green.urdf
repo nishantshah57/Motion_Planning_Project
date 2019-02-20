@@ -8,13 +8,14 @@
     <visual>
       <origin xyz="0 0 0.0445"/>
       <geometry>
-        <cylinder radius="0.0145" length="0.089"/>
+        <cylinder radius="0.05" length="1.089"/>
+        <!--<cylinder radius="0.0145" length="0.089"/>-->
       </geometry>
     </visual>
     <collision>
       <origin xyz="0 0 0.0445"/>
       <geometry>
-        <cylinder radius="0.0145" length="0.089"/>
+        <cylinder radius="0.05" length="1.089"/>
       </geometry>
     </collision>
   </link>
@@ -22,4 +23,3 @@
     <material>Gazebo/Green</material>
   </gazebo>
 </robot>
-
